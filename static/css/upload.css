@@ -1,0 +1,184 @@
+body{
+  height:100vh;
+  display:flex;
+  background: #2c302d;
+  /* background-color: #FAEBEFFF; */
+  color: white;
+  /* color: black; */
+  /* color: #E94B3CFF; */
+  /* background-color: #1e272e; */
+  background-color: #0c0d0b;
+  background-image: url("https://www.transparenttextures.com/patterns/robots.png");
+  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+}
+button {
+    background-color: #0d6efd;
+    border: none;
+    color: #FFFFFF;
+    padding: 15px 32px;
+    text-align: center;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    margin:10px;
+}
+#container{
+  display:grid;
+  width:300px;
+  margin:auto;
+  border: 2px dotted ;
+  text-align:center;
+  /* height: 70vh; */
+}
+h1{
+  font-family: 'Merriweather Sans', sans-serif;
+  font-weight: bold;
+  /* color: #0d6efd; */
+}
+p{
+  margin:0;
+  font-family:monospace;
+  font-size:1.5em;
+  display: none;
+}
+img{
+  max-width:calc(100% - 20px);
+  margin:10px;
+}
+.chosing{
+  font-size: 20px; 
+}
+.form-left{
+    position: absolute;
+    left: 20%;
+}
+.select{
+  height: 9vh;
+  border-radius: 9px;
+}
+.form-right{
+  position: relative;
+  left: 50%;
+  top: 1vh;
+}
+.upload{
+  left: 60%;
+  position: absolute;
+}
+.go-home{
+  position: absolute;
+  left: 74%;
+}
+.ball{
+  background-color: black;
+  border-radius: 50%;
+  top: 2px;
+  left: 2px;
+  height: 22px;
+  width: 22px;
+  position: absolute;
+  transition: transform 0.2 linear ;
+}
+.toogle-button{
+  position: absolute;
+  display: flex;
+  top: 1%;
+  /* align-items: center; */
+  /* left: 86vw; */
+}
+.label{
+  background-color: white;
+  display: flex;
+  /* flex-direction: column; */
+  border-radius: 50px;
+  position: relative;
+  height: 26px;
+  width: 50px;
+}
+.checkbox{
+  opacity: 0;
+  position:absolute;
+}
+.checkbox:checked + .label .ball{
+  transform: translateX(23px);
+}
+
+body.dark{
+  background-color: rgb(246, 244, 244);
+  color: black;
+}
+
+body.dark h1{
+  color: black;
+  font-weight: 800;
+}
+
+body.dark .label{
+  background-color: black;
+}
+
+body.dark .ball{
+  background-color: white;
+}
+
+body.dark .form-control{
+  border: 2px solid;
+}
+
+@media screen and (max-width:430px) {
+  .form-left , .form-right , .go-home , .upload{
+    position: unset;
+  }
+  /* #container{
+    /* height: 20vh;
+  } */
+  .form-right label{
+    margin: 5px;
+  }
+  body .toogle-button{
+    left: unset;
+  }
+}
+
+@media screen and (min-width:500px) and (max-width:770px){
+  .form-right textarea{
+    width: 50vw;
+    position: absolute;
+    left: 47%;
+    top: 8vh;
+  }
+  body .toogle-button{
+    left: unset;
+  }
+  .upload{
+    left: 65%;
+    /* position: absolute; */
+    top: 40%;
+  }
+  .go-home{
+    position: absolute;
+    left: 49%;
+    top: 40%;
+  }
+  .form-right{
+    position: relative;
+    left: 0%;
+  }
+  .form-left{
+    position: absolute;
+    left: 4%;
+  }
+  .form-right label{
+    position: absolute;
+    top: 2vh;
+    font-size: 17px;
+  }
+}
+
+@media screen and (min-width:800px) and (max-width:1100px) {
+  body .toogle-button{
+    left: unset;
+  }
+}
