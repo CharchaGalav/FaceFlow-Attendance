@@ -81,7 +81,7 @@ To use FaceAttendance, ensure you have the following installed:
 3. Navigate to the project directory:
 
     ```bash
-    cd FaceAttendance
+    cd FaceFlow-Attendance
     ```
 
 
